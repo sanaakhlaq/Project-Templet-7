@@ -1,61 +1,44 @@
-import React from "react";
-import { FiSearch,} from "react-icons/fi";
-import { AiOutlineHeart, AiOutlineBell } from "react-icons/ai";
+import Image from "next/image";
+import { FaSearch, FaSlidersH, FaHeart, FaBell, FaCog } from "react-icons/fa";
 
-
-import Image from "next/image"; // Importing Next.js Image Component
-
-
-const Header = () => {
+export default function Navbar() {
   return (
-    <header className="bg-white shadow-md py-4">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+    <nav className="bg-white shadow-md py-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 space-y-4 md:space-y-0">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-         
-          <span className="text-xl font-bold text-blue-600">
-            MOR<span className="text-blue-600">ENT</span>
-          </span>
-        </div>
-        <div className="relative flex items-center pl-14">
+        <h1 className="text-2xl font-bold text-blue-600">MORENT</h1>
+
+        {/* Search Bar */}
+        <div className="flex items-center bg-gray-100 rounded-full px-4 py-2 w-full md:w-1/3">
+          <FaSearch className="text-gray-400 mr-2" />
           <input
             type="text"
             placeholder="Search something here"
-            className="w-[492px] h-[44px] p-2 pl-4 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-grow bg-transparent outline-none text-gray-600"
           />
-          <button className="absolute right-3 text-blue-500">
-            <FiSearch size={18} />
-          </button>
+          <FaSlidersH className="text-gray-400 ml-2" />
         </div>
 
-        {/* Navigation (hidden for mobile) */}
-        <div className="relative flex items-center pl-14">
-          
-        {/* Icons */}
-        <div className="flex items-center space-x-4">
-        <AiOutlineHeart className="text-gray-600 cursor-pointer" size={22} />
-        <AiOutlineBell className="text-gray-600" size={22} />
-        
-          {/* Heart Icon */}
-          <button
-            className="p-2 text-gray-700 hover:text-blue-600"
-            aria-label="Favorites"
-             
-          >
-            <Image src="/settings.png" alt="Favorites" width={24} height={24} />
-          </button>
-          {/* User Profile Icon */}
-          <button
-            className="p-2 text-gray-700 hover:text-blue-600"
-            aria-label="User Profile"
-          >
-            <Image src="/profil.png" alt="User Profile" width={24} height={24} />
-          </button>
+        {/* Icons & Avatar */}
+        <div className="flex items-center justify-center space-x-4">
+          {/* Icons */}
+          <FaHeart className="text-gray-500 hover:text-blue-600 text-lg cursor-pointer" />
+          <div className="relative">
+            <FaBell className="text-gray-500 hover:text-blue-600 text-lg cursor-pointer" />
+            <span className="absolute top-0 right-0 bg-red-500 rounded-full w-2 h-2"></span>
+          </div>
+          <FaCog className="text-gray-500 hover:text-blue-600 text-lg cursor-pointer" />
+
+          {/* User Avatar */}
+          <Image
+            src="/profil.png"
+            width={24}
+            height={24}
+            alt="User Avatar"
+            className="w-10 h-10 rounded-full border-2 border-gray-300"
+          />
         </div>
       </div>
-      </div>
-    </header>
+    </nav>
   );
-};
-
-export default Header;
+}
