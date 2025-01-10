@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -19,9 +20,11 @@ export default function Hero() {
               Ease of doing a car rental safely and <br /> reliably. Of course
               at a low price.
             </p>
+            <Link href="/payment">
             <button className="bg-blue-800 hover:bg-blue-600 text-white py-2 mb-16 px-4 rounded-lg shadow-lg">
               Rental Car
             </button>
+            </Link>
           </div>
 
           {/* Car Image */}
@@ -48,9 +51,11 @@ export default function Hero() {
               Providing cheap car rental services <br /> and safe and
               comfortable facilities.
             </p>
-            <button className="bg-blue-400 hover:bg-blue-700 text-white py-2 mr-52 mb-5  px-4 rounded-lg shadow-lg">
+            <Link href="/payment">
+            <button className="bg-blue-400 hover:bg-blue-700 text-white py-2 mr-52 mb-6  px-4 rounded-lg shadow-lg">
               Rental Car
             </button>
+            </Link>
           </div>
 
           {/* Car Image */}
