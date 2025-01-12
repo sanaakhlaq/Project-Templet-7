@@ -1,31 +1,25 @@
 
-import CarListing from "@/Components/CarListnig";
+"use client";
 
-
-import Hero from "@/Components/Hero";
-
-
-
-
+import Hero from "@/components/Hero";
+import CarListing from "@/components/CarListing";
 
 export default function Home() {
- 
+  const filters = {
+    types: [],
+    capacities: [],
+    price: 100,
+  };
 
   return (
     <div>
-      
-      
+      {/* Hero Section */}
       <Hero />
-      <CarListing/>
-      
-      
-      
-      
-      
-      
- 
-      
-      
+
+      {/* Car Listing */}
+      <div className="w-full mt-8">
+        <CarListing filters={filters} />
+      </div>
     </div>
   );
 }

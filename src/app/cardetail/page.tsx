@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const CarDetailPage = () => {
   return (
@@ -96,9 +97,11 @@ const CarDetailPage = () => {
               </p>
             </div>
             <div className="text-2xl font-bold text-blue-600 mb-4">$80.00/day</div>
+            <Link href="payment">
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
               Rent Now
             </button>
+            </Link>
           </div>
         </div>
 
