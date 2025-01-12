@@ -79,8 +79,8 @@ const CarDetailPage = () => {
           <div>
             <h1 className="text-3xl font-bold mb-4">Nissan GT - R</h1>
             <p className="text-gray-600 mb-4">
-              NISMO has become the embodiment of Nissan's outstanding performance, inspired by the
-              most unforgiving proving ground, the "race track."
+              NISMO has become the embodiment of Nissan&#39;s outstanding performance, inspired by the
+              most unforgiving proving ground, the &ldquo;race track.&#34;
             </p>
             <div className="text-gray-700 mb-4">
               <p>

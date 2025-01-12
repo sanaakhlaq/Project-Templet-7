@@ -4,7 +4,8 @@ import "./globals.css";
 
 
 import Footer from "@/components/Footer";
-import HeaderTop from "@/components/Header";
+import Header from "@/components/Header"
+
 
 
 
@@ -35,7 +36,7 @@ export default function RootLayout({
       >
         
         
-        <HeaderTop/>
+        <Header/>
         {children}
       </body>
       <Footer />

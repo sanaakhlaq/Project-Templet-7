@@ -1,11 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
+
 const Dashboard = () => {
   return (
     <div className="flex bg-gray-50 h-screen">
+      
       {/* Sidebar */}
-      <div className="w-64 bg-gray-100 h-screen flex flex-col p-4">
+      <div className="w-64 bg-gray-100 h-screen  flex flex-col p-4">
+        
         <h2 className="text-2xl font-bold mb-8">Dashboard</h2>
         <nav className="space-y-4">
           <a href="#" className="block text-blue-500 font-medium">
@@ -26,7 +29,7 @@ const Dashboard = () => {
       <div className="flex-1 p-6">
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Details Rental */}
-          <div className="bg-white shadow-md rounded-lg p-4">
+          <div className="bg-white shadow-md  rounded-lg p-4">
             <h3 className="text-lg font-bold mb-4">Details Rental</h3>
             <Image src="/map.3.jpg" width={300} height={250} alt="map"/>
             <div className="text-sm space-y-2">

@@ -3,8 +3,14 @@
 import Sidebar from "@/components/Sidebar";
 import CarCard from "@/components/CarCard"; // Importing CarCard
 import { useRouter } from "next/navigation";
-
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import category from "@/app/category/page";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import paymentPage from "@/app/payment/page";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import dashboard from "@/app/dashboard/page";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import cardetailPage from "@/app/cardetail/page";
 const cars = [
   {
     id: 1,
